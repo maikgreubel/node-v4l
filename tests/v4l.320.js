@@ -1,7 +1,7 @@
 var addon = require('../build/Release/v4l');
 var fs = require('fs');
 
-fs.writeFile("./test.jpg", addon.dump(), function(err) {
+fs.writeFile("./cam320.jpg", addon.dump("/dev/video0", 320, 240, 4), function(err) {
   if(err)
   {
     console.log(err);
